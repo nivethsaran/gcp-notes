@@ -29,7 +29,7 @@
     - SaaS - Software as a service
         - Google's popular applications like, Search, Gmail, Docs and Drive are Software as a Service applications in that they're consumed directly over the internet by end users.
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled.png)
         
 
 ### Google's Network
@@ -129,7 +129,7 @@
 - Org node is created by default if GSuite is subscribed, else Google Cloud identity is used to create one.
 - There are some special roles associated with Org Node. For example, you can designate an organization policy administrator, so that only people with privilege can change policies. You can also assign a project creator role, which is a great way to control who can spend money.
     
-    ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%201.png)
+    ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%201.png)
     
 - A policy is set on a resource.
 - Each policy contains a set of roles and role members.
@@ -147,20 +147,20 @@
         - Primitive roles are broad. You apply them to a GCP project, and they affect all resources in that project
         - These are the Owner, Editor, and Viewer roles. If you’re a viewer on a given resource, you can examine it but not change its state. If you’re an editor, you can do everything a viewer can do plus change its state. And if you’re an owner, you can do everything an editor can do plus manage roles and permissions on the resource. The owner role on a project lets you do one more thing too: you can set up billing. Often companies want someone to be able to control the billing for a project without the right to change the resources in the project, and that’s why you can grant someone the billing administrator role.
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%202.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%202.png)
         
     - Predefined
         - GCP services offers their own sets of predefined roles, and they define where those roles can be applied. For example, later in this course, we’ll talk more about Compute Engine, which offers virtual machines as a service. Compute Engine offers a set of predefined roles, and you can apply them to Compute Engine resources in a given project, a given folder, or an entire organization.
         - Compute Engine’s instanceAdmin role let's whoever has it perform a certain set of actions on virtual machines. What set of actions? Those listed here: listing them, reading and changing their configurations, and starting and stopping them. And which virtual machines? Well, that depends on where the role is applied.
         - In this example, all the users of a certain Google group have the role, and they have it on all the virtual machines in project A.
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%203.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%203.png)
         
     - Custom
         - IAM custom roles let you define a precise set of permissions
         - What if you need something even finer-grained? That’s what custom roles permit. A lot of companies use a “least-privilege” model, in which each person in your organization the minimal amount of privilege needed to do his or her job. So, for example, maybe I want to define an “instanceOperator” role, to allow some users to stop and start Compute Engine virtual machines but not reconfigure them. Custom roles allow me to do that
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%204.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%204.png)
         
 - Service Accounts control server to server instructions
     - What if you want to give permissions to a Compute Engine virtual machine rather than to a person? That’s what service accounts are for. For instance, maybe you have an application running in a virtual machine that needs to store data in Google Cloud Storage. But you don’t want to let just anyone on the Internet have access to that data; only that virtual machine. So you’d create a service account to authenticate your VM to Cloud Storage. Service accounts are named with an email address, but instead of passwords they use cryptographic keys to access resources.
@@ -239,7 +239,7 @@
         - No pre-warming is required.
     - 
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%205.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%205.png)
         
     - Google VPC offers a suite of load-balancing options
         - If you need cross-regional load balancing for a Web application, use HTTP(S) load balancing. For Secure Sockets Layer traffic that is not HTTP, use the Global SSL Proxy load balancer. If it’s other TCP traffic that does not use Secure Sockets Layer, use the Global TCP Proxy load balancer.
@@ -285,14 +285,14 @@
                 - Backing up data to a Google Cloud Storage bucket from other storage providers
                 - Moving data from a Standard Storage bucket to a Nearline Storage bucket to lower your storage costs
             
-            ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%206.png)
+            ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%206.png)
             
             - Your Cloud Storage files are organized into buckets. When you create a bucket: you give it a globally-unique name; you specify a geographic location where the bucket and its contents are stored; and you choose a default storage class. Pick a location that minimizes latency for your users. For example, if most of your users are in Europe, you probably want to pick a European location: a GCP region in Europe, or else the EU multi-region.
             - There are several ways to control users’ access to your objects and buckets. For most purposes, Cloud IAM is sufficient. Roles are inherited from project to bucket to object. If you need finer control, you can create access control lists (“ACLs”) that offer finer control, ACLs define who has access to your buckets and objects, as well as what level of access they have. Each ACL consists of two pieces of information: A scope, which defines who can perform the specified actions (for example, a specific user or group of users). And a permission, which defines what actions can be performed (for example, read or write).
             - Remember that Cloud Storage objects are immutable. You can turn on object versioning on your buckets if you want. If you do, Cloud Storage keeps a history of modifications--that is, overwrites or deletes--of all objects in the bucket. You can list the archived versions of an object, restore an object to an older state, or permanently delete a version, as needed. If you don’t turn on object versioning, new always overwrites old.
             - Cloud Storage also offers lifecycle management policies. For example, you could tell Cloud Storage to delete objects older than 365 days, or to delete objects created before January 1, 2013; or to keep only the 3 most recent versions of each object in a bucket that has versioning enabled.
             
-            ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%207.png)
+            ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%207.png)
             
             - There are several ways to bring data into Cloud Storage
                 - Online Transfer (Self-managed copies using command-line tools or drag-and-drop)
@@ -302,7 +302,7 @@
                 - Transfer Appliance (Rackable appliances to securely ship your data)
                     - The Transfer Appliance is a rackable, high-capacity storage server that you lease from Google Cloud. You simply connect it to your network, load it with data, and then ship it to an upload facility where the data is uploaded to Cloud Storage. The service enables you to securely transfer up to a petabyte of data on a single appliance. As of this recording, it’s still beta, and it’s not available everywhere, so check the website for details.
                 
-                ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%208.png)
+                ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%208.png)
                 
         - Cloud Big Table
             - Fully managed NoSQL, wide-column database service for terabyte applications
@@ -323,7 +323,7 @@
                 - Especially if it is Time series, big data and machine learning
             - Bigtable is designed to handle massive workloads at consistent low latency and high throughput, so it's a great choice for both operational and analytical applications, including IoT, user analytics, and financial data analysis.
                 
-                ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%209.png)
+                ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%209.png)
                 
         - Cloud SQL or Cloud Spanner
             - Managed RDBMS
@@ -364,9 +364,9 @@
             - Includes a free daily quota
             - Access from anywhere through a RESTful interfac
             
-            ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2010.png)
+            ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2010.png)
             
-            ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2011.png)
+            ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2011.png)
             
 
 ### Containerization and Kubernetes (GKE)
@@ -378,7 +378,7 @@ TODO
     - Housed on premises means difficult to upgrade since there is a need to buy new servers if capacity increase is needed (Upgrade is costly and server lifespan is short)
     - Lead time for new capacity could be up to a year or more
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2012.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2012.png)
         
     - Benefits of Cloud solution
         - Move only some of your compute workloads to cloud
@@ -388,7 +388,7 @@ TODO
     - Anthos is a hybrid and multi-cloud solution powered by the latest innovations in distributed systems, and service management software from Google. The Anthos framework rests on Kubernetes and Google Kubernetes engine deployed on-prem. Which provides the foundation for an architecture that is fully integrated with centralized management through a central control plane that supports policy based application lifecycle delivery across hybrid and multi-cloud environments.
     - Anthos also provides a rich set of tools for monitoring and maintaining the consistency of your applications across all of your network, whether on-premises, in the Cloud, or in multiple clouds.
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2013.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2013.png)
         
     - -
 
@@ -434,7 +434,7 @@ TODO
     - In this diagram we see App Engine Standard Environment in practice. You’ll develop your application and run a test version of it locally using the App Engine SDK. Then, when you’re ready, you’ll use the SDK to deploy it.
     - Each App Engine application runs in a GCP project. App Engine automatically provisions server instances and scales and load-balances them. Meanwhile, your application can make calls to a variety of services using dedicated APIs. For example, a NoSQL datastore to make data persistent; caching of that data using memcache; searching; logging; user login; and the ability to launch actions not triggered by direct user requests, like task queues and a task scheduler
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2014.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2014.png)
         
 - App Engine Flexible Environment
     - Build and deploy containerized apps with a click
@@ -454,9 +454,9 @@ TODO
         - VM instances are restarted on a weekly basis. During restarts, Google's management services will apply any necessary operating system and security updates.
         - App Engine flexible environment apps that use standard runtimes can access App Engine services: Datastore, Memcache, task queues, logging, users, and so on.
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2015.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2015.png)
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2016.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2016.png)
         
 - Cloud Endpoints and Apigee Edge
     - Distributed API management through an API console
@@ -564,7 +564,7 @@ TODO
         - Reliable & Consistent Processing
             - Cloud Dataflow provides built-in support for fault-tolerant execution that is consistent and correct regardless of data size, cluster size, processing pattern or pipeline complexity.
         
-        ![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2017.png)
+        ![Untitled](Google%20Cloud%20Fundamentals%20Core%20Infrastructure%20Attachments/Untitled%2017.png)
         
     - Why use cloud dataflow?
         - ETL (extract/transform/load) pipelines to move, filter, enrich, shape data
