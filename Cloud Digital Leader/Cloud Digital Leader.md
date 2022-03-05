@@ -256,16 +256,16 @@ in what are called “Kondratiev waves” or “innovation waves.”
 - Traditionally, the hardware available for computing could only run a limited amount of software and applications. But with virtual machines or ‘VMs’, multiple systems can now run on the same hardware. VMs share the same pool of computer processing, storage, and networking resources.
 - The software layer that enables this is called a hypervisor. A hypervisor sits on top of physical hardware, and multiple VMs are built on top of it. It’s like having multiple computers that only use one piece of hardware.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled.png)
 
 - Virtual machines recreate a full representation of the hardware. Containers only recreate, or virtualize, the operating systems.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%201.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%201.png)
 
 - Containers only hold exactly what’s needed for the particular application that they support. They start faster, use less memory, and allow developers to create predictable environments.
 - Containers are like prefabricated units placed on top of each other. This means that any problem that arises is easier to isolate and fix.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%202.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%202.png)
 
 - **FAAS -Function As A Service**
     - Serverless computing means that resources, such as compute power, are automatically provisioned behind-the-scenes as needed. Businesses do not pay for compute power unless they are actually running a query or application.
@@ -280,7 +280,7 @@ in what are called “Kondratiev waves” or “innovation waves.”
 
  
 
-![Coming Up Next](Cloud%20Digi%2068a8f/Untitled%203.png)
+![Coming Up Next](Cloud%20Digital%20Leader%20Attachments/Untitled%203.png)
 
 Coming Up Next
 
@@ -323,7 +323,7 @@ Coming Up Next
 - Adopting an automated continuous integration or ‘CI/CD’ can help you increase your application release velocity and reliability. You can test and roll out changes incrementally. This approach enables you to lower the risk of regressions, debug issues quickly, and roll back to the last stable build if necessary-- all without interrupting service for your users.
 - Containerization allows developers App App App to divide an application design into individual compartments. Parts of the code can be updated without affecting the whole application. This builds resilience, because one error doesn’t impact the whole application.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%204.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%204.png)
 
 - Kubernetes
     - Kubernetes is an open-source container-orchestration system for automating computer application deployment, scaling, and management.
@@ -346,20 +346,20 @@ Coming Up Next
 - An API is a piece of software that connects different applications and enables information to flow between systems, so businesses can unlock value and create new services. They expose data in a way that protects the integrity of the legacy systems and enables secure and governed access to the underlying data.
 - Web or mobile apps are built by internal enterprise developers or by external third-party companies. APIs are built and managed by the API Team within the enterprise. App developers leverage those APIs to integrate with backend services and other service endpoints.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%205.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%205.png)
 
 - A digital ecosystem is a group of interconnected companies and products. This includes vendors, third party suppliers, customers, and applications. A robust, well connected, and multi faceted digital ecosystem enables businesses to create and monetize new digital experiences.
 - The more you know about your customers, the better able you are to offer a truly integrated, end-to-end digital experience.
 - Legacy systems provide business data but don’t provide features and capabilities at the rate of change demanded by today’s users. Modern applications provide connected experiences and can be rapidly updated to meet user demands.
 - Developers need to manage the entire application lifecycle, connect to different backend systems—including legacy ones—and be able to track and analyze the interactions between consumers and data and service producers.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%206.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%206.png)
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%207.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%207.png)
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%208.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%208.png)
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%209.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%209.png)
 
 - Legacy systems provide business data but don’t provide features and capabilities at the rate of change demanded by today’s users. Modern applications provide connected experiences and can be rapidly updated to meet user demands.
 - Developers need to manage the entire application lifecycle, connect to different backend systems—including legacy ones—and be able to track and analyze the interactions between consumers and data and service producers.
@@ -367,7 +367,7 @@ Coming Up Next
 - Apigee is a fully featured API management platform that enables application developers and API providers to create connected digital experiences for end users. Apigee bridges the gap between legacy systems.
 - The Apigee platform includes API services that provide the runtime API gateway functionality, Developer Services that allow developers to utilize their APIs, and Analytics Services that enable enterprises to report on APIs.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%2010.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2010.png)
 
 ---
 
@@ -395,7 +395,7 @@ Coming Up Next
         - Google Cloud brings its own native tools to help organizations monitor and manage their costs. In fact, these tools enable organizations to gain greater visibility, drive a culture of accountability for cloud spending, control costs to reduce the risk of overspending, and provide intelligent recommendations to optimize costs and usage.
 - Whether an organization is moving to the cloud for the first time or moving from a single cloud provider to multiple providers, how they calculate the total cost of ownership of the IT infrastructure will vary. Total cost of ownership varies with complexity
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%2011.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2011.png)
 
 - Historically, when companies spent a substantial amount of money upfront to set up their IT infrastructure, the capital expenditure would include paying for:
     - Space and associated costs
@@ -491,7 +491,7 @@ Coming Up Next
     - Operations
         - At Google, a global operations team of more than 900 security experts monitor the system 24 hours a day, 365 days a year. Their role is to detect attacks and other issues and to respond to them.
 
-![Untitled](Cloud%20Digi%2068a8f/Untitled%2012.png)
+![Untitled](Cloud%20Digital%20Leader%20Attachments/Untitled%2012.png)
 
 - IT teams need to have a complete understanding of who can access what data. Wherever possible, they need to establish granular access policies. They need to define who can do what, and on what cloud resource.
 - An Identity Access Management policy, or IAM policy, is made of three parts:
