@@ -11,7 +11,7 @@
 - REST API
 - Cloud Mobile App
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled.png)
 
 ### VPC Objects
 
@@ -60,9 +60,9 @@
         - Regional IP allocation
         - Expandable to IP ranges you specify.
         
-        ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%201.png)
+        ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%201.png)
         
-        ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%202.png)
+        ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%202.png)
         
 - Expand subnets without recreating instances
     - Cannot overlap with other subnets
@@ -72,7 +72,7 @@
     - Auto mode can be expanded from /20 to /16
     - Avoid large subnets
     
-    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%203.png)
+    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%203.png)
     
 - External IPs are mapped to internal IP’s
 - DNS Resolution for internal addresses
@@ -91,7 +91,7 @@
     - Create and update millions of DNS records
     - UI command line or API
     
-    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%204.png)
+    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%204.png)
     
 
 ### Routes and Firewall Rules
@@ -105,18 +105,18 @@
     - Firewall rules must also allow the packet
 - Routes map traffic to destination networks~
     
-    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%205.png)
+    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%205.png)
     
     - Each route in the routes collection may apply to one or more instances. A route applies to an instance if the network and instance tags match. If the network matches and there are no instance tags specified, the route applies to all instances in that network.
     - Compute Engine then uses the routes collection to create individual read-only routing tables for each instance. This diagram shows a massively scalable virtual router at the core of each network
     - //Bullet this para → Every virtual machine instance in the network is directly connected to this router, and all packets leaving a virtual machine instance, are first handled at this layer, before they are forwarded to the next top. The virtual network router selects the next stop for a packet by consulting the routing table for that instance.GCP firewall rules protect your virtual machine instances from unapproved connections both inbound and outbound known as ingress and egress respectively. Essentially, every VPC network functions as a distributed firewall. Although firewall rules are applied to the network as a whole, connections are allowed or denied at the instance level. You can think of the firewall as existing not only between your instances and other networks, but between individual instances within the same network. GCP firewall rules are stateful. This means that if a connection is allowed between a source and a target or a targeted at destination, all subsequent traffic in either direction will be allowed. In other words, firewall rules allow bidirectional communication once a session is established. Also, if for some reason all firewall rules in a network are deleted, there's still an implied deny all ingress rule and an implied allow all egress rule for the network. You can express your desired firewall configuration as a set of firewall rules. Conceptually, a firewall rule is composed of the following parameters. The direction of the rule, inbound connections are matched against ingress rules only, and up on connections are matched against egress rules only. The source of the connection for ingress packets or D destination of the connection for egress packets, the protocol and port of the connection where any rule can be restricted to apply to specific protocols only or specific combinations of protocols and ports only. The action of the rule which is to allow or deny packets that match the direction, protocol, port, and source or destination of the rule. The priority of the rule which governs the order in which rules are evaluated; the first matching rule is applied. The rule assignment. By default all rules are assigned to all instances, but you can assign certain rules to certain instances only. For more information on firewall rule components, please refer to the links section of this video. Let's look at some GCP firewall overall use cases for both egress and ingress. Egress firewall rules control outgoing connections originated inside your GCP network. Egress allow rules, allow outbound connections that match the civic protocol ports and IP addresses. Egress deny rules prevent instances from initiating connections that match non permitted port protocol in the IP range combinations. For egress firewall rules, destinations to which a rule applies maybe specified using IP CIDR ranges. Specifically, you can use the destination ranges to protect from undesired connections initiated by a VM instance towards an external host as shown on the left. You can also use destination ranges to prevent undesired connections, some internal VM instances to specific GCP CIDR ranges. This is illustrated in the middle where VM in a specific subnet is shown attempting to connect inappropriately to another VM within the same network. Ingress firewall rules protect against incoming connections to the instance from any source. Ingress allow rules, allow specific protocol ports and IP ranges to connect in. The firewall prevents instances from receiving connections on non permitted ports and protocols. Rules can be restricted to only affect particular sources. Source CIDR ranges can be used to protect an instance from undesired connections coming either from external networks or from GCP IP ranges. This diagram illustrates a VM receiving a connection from an external address and another VM receiving a connection from a VM within the same network. You can control ingress connections from a VM instance by constructing inbound connection conditions using source CIDR ranges, protocols, or ports
     
-    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%206.png)
+    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%206.png)
     
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%207.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%207.png)
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%208.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%208.png)
 
 - **Pricing**
     - [https://cloud.google.com/compute/all-pricing#general_network_pricing](https://cloud.google.com/compute/all-pricing#general_network_pricing)
@@ -127,7 +127,7 @@
 
 ### Compute Engine(Creating VM’s)
 
-![Screenshot 2022-03-25 at 4.15.17 PM.png](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Screenshot_2022-03-25_at_4.15.17_PM.png)
+![Screenshot 2022-03-25 at 4.15.17 PM.png](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Screenshot_2022-03-25_at_4.15.17_PM.png)
 
 - Infrastructure as a Service
 - Predefined or custom machine types
@@ -139,7 +139,7 @@
     - Networking
     - Linux or windows
         
-        ![Screenshot 2022-03-25 at 4.16.48 PM.png](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Screenshot_2022-03-25_at_4.16.48_PM.png)
+        ![Screenshot 2022-03-25 at 4.16.48 PM.png](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Screenshot_2022-03-25_at_4.16.48_PM.png)
         
 - Compute
     - Several Machine Types
@@ -173,7 +173,7 @@
 | Requires firewall rule to allow tcp:22 | Requires setting the windows password |
 |  | Requires the firewall rule to allow tcp:3389 |
 
-![Screenshot 2022-03-25 at 4.29.44 PM.png](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Screenshot_2022-03-25_at_4.29.44_PM.png)
+![Screenshot 2022-03-25 at 4.29.44 PM.png](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Screenshot_2022-03-25_at_4.29.44_PM.png)
 
 The lifecycle of a VM is represented by different statuses. We will cover this lifecycle
 on a high level, but we recommend returning to this diagram as a reference.
@@ -201,7 +201,7 @@ on your computer. This actions wipes the memory contents of the machine and rese
 the virtual machine to its initial state. The instance remains in the running state
 through the reset.
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%209.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%209.png)
 
 There are different ways you can change a VM state from running. Some methods
 involve the Cloud Console and the gcloud command, while others are performed from
@@ -269,27 +269,27 @@ across VM instances and applies patches.
         - Standard
             - Standard machine types are suitable for tasks that have a balance of CPU and memory needs. Standard machine types have 3.75 GB of memory per vCPU. The vCPU configurations come in different intervals from 1 vCPU all the way to 96 vCPUs, as shown on this table. Each of these machines supports a maximum of 128 persistent disks with a total persistent disk size of 257 TB, which is also the case for the High-memory, High-CPU, Memory-optimized, and Compute-optimized machine types.
             
-            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2010.png)
+            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2010.png)
             
         - High-memory
             - High-memory machine types are ideal for tasks that require more memory relative to vCPUs. High-memory machine types have 6.50 GB of system memory per vCPU. Similarly to the standard machine types, the vCPU configurations come in different intervals from 2 vCPUs all the way to 96 vCPUs, as shown on this table.
             
-            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2011.png)
+            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2011.png)
             
         - High-CPU
             - High-CPU machine types are ideal for tasks that require more vCPUs relative to memory. High-CPU machine types have 0.90 GB of memory per vCPU.
             
-            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2012.png)
+            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2012.png)
             
         - Memory-optimized
             - Memory-optimized machine types are ideal for tasks that require intensive use of memory, with higher memory to vCPU ratios than high-memory machine types. These machines types are perfectly suited for in-memory databases and in-memory analytics, such as SAP HANA and business warehousing workloads, genomics analysis, and SQL analysis services. Memory-optimized machine types have more than 14 GB of memory per vCPU. These machine come in 4 configurations as shown in this table, with only the m1-megamem-96 currently supporting a local SSD.
             
-            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2013.png)
+            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2013.png)
             
         - Compute-optimized
             - Compute-optimized machine types are ideal for compute-intensive workloads. These machine types offer the highest performance per core on Compute Engine. Built on the latest-generation Intel Scalable Processors (the Cascade Lake), C2 machine types offer up to 3.8 Ghz sustained all-core turbo and provide full transparency into the architecture of the underlying server platforms, enabling advanced performance tuning. C2 machine types offer much more computing power, run on a newer platform, and are generally more robust for compute-intensive workloads than the N1 high-CPU machine types.
             
-            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2014.png)
+            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2014.png)
             
         - Shared-Core
             - Shared-core machine types provide one vCPU that is allowed to run for a portion of the time on a single hardware hyper-thread on the host CPU running your instance. Shared-core instances can be more cost-effective for running small, non-resource-intensive applications than other machine types. There are only two shared-core machine types to choose from:
@@ -297,7 +297,7 @@ across VM instances and applies patches.
                 - g1-small
             - f1-micro machine types offer bursting capabilities that allow instances to use additional physical CPU for short periods of time. Bursting happens automatically when your instance requires more physical CPU than originally allocated. During these spikes, your instance will opportunistically take advantage of available physical CPU in bursts. Note that bursts are not permanent and are only possible periodically.
             
-            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2015.png)
+            ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2015.png)
             
     - Custom Machine Types: You specify the amount of memory and number of CPU’s
         - If none of the predefined machine types match your needs, you can independently specify the number of vCPUs and the amount of memory for your instance. Custom machine types are ideal for the following scenarios:
@@ -314,9 +314,9 @@ across VM instances and applies patches.
 
 ### Compute Pricing
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2016.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2016.png)
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2017.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2017.png)
 
 ### Special Compute Configurations
 
@@ -332,7 +332,7 @@ across VM instances and applies patches.
 - You can request that CPU quota for a region be split between regular and preemption
     - Default: preemptible VMs count against region CPU quota
     
-    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2018.png)
+    ![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2018.png)
     
 
 **Sole Tenant Nodes**
@@ -380,7 +380,7 @@ across VM instances and applies patches.
     - Import from on-prem, workstation, or another cloud
     - Management features: image sharing, image family, deprecation
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2019.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2019.png)
 
 ### Disks
 
@@ -432,15 +432,15 @@ across VM instances and applies patches.
     - May need a larger machine type if RAM was sized for the application
     - Consider using a persistent disk to back up RAM disk data
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2020.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2020.png)
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2021.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2021.png)
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2022.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2022.png)
 
 ### Common Compute Engine actions
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2023.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2023.png)
 
 - Every VM instance stores its metadata on a metadata server. The metadata server is particularly useful in combination with startup and shutdown scripts, because you can use the metadata server to programmatically get unique information about an instance, without additional authorization. For example, you can write a startup script that gets the metadata key/value pair for an instance's external IP address and use that IP address in your script to set up a database. Because the default metadata keys are the same on every instance, you can reuse your script without having to update it for each instance. This helps you create less brittle code for your applications.
 - Storing and retrieving instance metadata is a very common Compute Engine action. I recommend storing the startup and shutdown scripts in Cloud Storage, as you will explore in the upcoming lab of this module.
@@ -462,15 +462,15 @@ across VM instances and applies patches.
 
 - Snapshots have many use cases. For example, they can be used to backup critical data into a durable storage solution to meet application, availability, and recovery requirements. These snapshots are stored in Cloud Storage, which is covered later.
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2024.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2024.png)
 
 - Snapshots can also be used to migrate data between zones. I just discussed this when going over the manual process of moving an instance between two regions, but this can also be used to simply transfer data from one zone to another. For example, you might want to minimize latency by migrating data to a drive that can be locally attached in the zone where it is used.
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2025.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2025.png)
 
 - another snapshot use case of transferring data to a different disk type. For example, if you want to improve disk performance, you could use a snapshot to transfer data from a standard HDD persistent disk to a SSD persistent disk.
 
-![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation/Untitled%2026.png)
+![Untitled](Essential%20Google%20Cloud%20Infrastructure%20Foundation%20Attachments/Untitled%2026.png)
 
 **Persistent Disk Snapshots**
 
